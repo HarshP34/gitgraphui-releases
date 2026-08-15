@@ -10,7 +10,7 @@ A free desktop Git client for Windows — visual commit graph, split diff viewer
 
 **Latest version (recommended):**
 
-[![Download](https://img.shields.io/github/v/release/HarshP34/git-graph-ui-releases?label=Download&style=for-the-badge)](https://github.com/HarshP34/git-graph-ui-releases/releases/latest)
+[![Download](https://img.shields.io/github/v/release/HarshP34/gitgraphui-releases?label=Download&style=for-the-badge)](https://github.com/HarshP34/gitgraphui-releases/releases/latest)
 
 ### System requirements
 
@@ -19,7 +19,7 @@ A free desktop Git client for Windows — visual commit graph, split diff viewer
 
 ### Install
 
-1. Download the `.exe` from [Releases](https://github.com/HarshP34/git-graph-ui-releases/releases/latest).
+1. Download the `.exe` from [Releases](https://github.com/HarshP34/gitgraphui-releases/releases/latest).
 2. Run the installer and follow the prompts.
 3. Open **Git Graph UI** from the Start menu or desktop shortcut.
 4. Click **Open Folder** and choose a folder that contains a `.git` directory.
@@ -52,7 +52,7 @@ The app checks this repo for updates automatically when a newer version is publi
 
 ## Updates
 
-New versions are published on the [Releases](https://github.com/HarshP34/git-graph-ui-releases/releases) page. Installed apps notify you when an update is available and can download and install it from this repository.
+New versions are published on the [Releases](https://github.com/HarshP34/gitgraphui-releases/releases) page. Installed apps notify you when an update is available and can download and install it from this repository.
 
 To see what changed, open the release notes on each version tag.
 
