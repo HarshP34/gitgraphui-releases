@@ -43,18 +43,10 @@ The app checks this repo for updates automatically when a newer version is publi
 Visual commit tree with branch lanes, colors, and auto-refresh via WebSocket whenever git state changes. Branch labels show real remote sync status (ahead, behind, or in sync). Connector lines stay clean when a commit’s parent sits in another column. Right-click any commit to cherry-pick, revert, create a branch, or copy its hash.
 
 ### Staging Area
-Stage, unstage, or discard individual files. The **Unstaged Files** section includes a **Discard all** button — it shows a confirmation with a file count, then runs `git restore` on tracked changes and `git clean -fd` on untracked files. Staged files are never affected. Discard asks for confirmation when your changes exist only in the stash.
+Stage, unstage, or discard individual files, with a discard-all option for unstaged changes and confirmation prompts when needed.
 
 ### Split Diff Viewer
-Side-by-side BEFORE/AFTER panels with:
-- **File status badge** — `ADDED` / `MODIFIED` / `DELETED` / `RENAMED`
-- **Sign column** — `−` on removed lines, `+` on added lines
-- **Left border accent** — red/green edge on every changed row
-- **Hunk header** — cyan separator with `@@` range info
-- **Blank row alignment** — diagonal-stripe placeholders keep context lines aligned across both panels
-- **Smart intra-line diff** — highlights only the changed tokens within a matched remove/add pair; suppressed when lines are too dissimilar
-- **Full file toggle** — switch between changed hunks only (`Hunks`) and the entire file (`Full`)
-- **Always-visible horizontal scrollbar** on each panel so the last line is never hidden
+Side-by-side before/after diff with syntax highlighting, hunk navigation, intra-line change highlighting, and options to view changed hunks or the full file.
 
 ### Minimap Sidebar *(full file view)*
 A two-column minimap alongside the diff — left half for removed lines (red), right half for added lines (green). Click any mark to scroll directly to that change. Positions are computed from rendered row index (including blank alignment rows), so clicks always land at the right spot.
@@ -66,14 +58,7 @@ Side-by-side Ours vs. Theirs view with per-conflict Accept/Reject controls. The 
 Checkout, create, delete, merge, and rebase branches from the UI. Merge and rebase work even with uncommitted changes — your work is parked automatically and restored when the operation finishes. **Reset** uses a compact dialog with clear options.
 
 ### Drag-and-Drop Merge
-Drag any branch badge in the graph and drop it onto the `✓` HEAD badge to open a merge popup.
-
-| Option | What it does |
-|--------|-------------|
-| **⇄ Merge** | Standard merge. Fast-forwards if possible; otherwise prompts for a merge commit message. |
-| **⊕ Merge (no fast-forward)** | Always creates a merge commit to preserve branch topology. Prompts for a message. |
-| **↶ Rebase onto source** | Replays your branch's commits on top of the source tip. Linear history, no merge commit — rewrites hashes, so avoid on shared branches. Requires confirmation. |
-| **→ Fast-forward only** | Moves HEAD to the source tip only when no divergence exists. Fails safely if branches have diverged. |
+Drag any branch badge in the graph and drop it onto the HEAD badge to open a merge popup with options for standard merge, merge without fast-forward, rebase onto source, or fast-forward only.
 
 ### Remote Operations
 Fetch, pull, push, and stash (push/pop) from the toolbar.
@@ -97,15 +82,6 @@ Fetch, pull, push, and stash (push/pop) from the toolbar.
 | **Monokai** | Warm dark with vibrant greens |
 
 All UI elements — including diff alignment stripes — adapt to the active theme.
-
-### Keyboard Shortcuts
-
-| Shortcut | Action |
-|---|---|
-| `Ctrl+Enter` | Commit staged changes |
-| `Ctrl+=` / `Ctrl++` | Zoom in |
-| `Ctrl+-` | Zoom out |
-| `Ctrl+0` | Reset zoom (100%) |
 
 Zoom range: 30%–300%.
 
